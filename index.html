@@ -67,10 +67,11 @@ svg {
       }
 
 </style>
-<link rel="stylesheet" type="text/css" href="https://syntagmatic.github.io/parallel-coordinates/d3.parcoords.css">
+<link rel="stylesheet" type="text/css" href="lib/d3.parcoords/css/d3.parcoords.css">
 <body>
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://syntagmatic.github.io/parallel-coordinates/d3.parcoords.js"></script>
+<script src="lib/d3/js/d3.js"></script>
+<script src="lib/d3.parcoords/js/d3.parcoords.js"></script>
+
 <script>
     var selectedPeople = [],safePeople = [], selectedRelations = [], selectedTopic, overPeople, overrelation, heatMapActive, topicIndexes = [], emailTopicIndexes = [], mainClasses, nodes, topicsNow,dataofemployee2,topicsSuspect = [];
     var names = [ "Mat Bramar", "Anda Ribera", "Rachel Pantanal", "Linda Lagos", "Ruscella Mies Haber", "Carla Forluniau", "Cornelia Lais", "Marin Onda", "Isande Borrasca", "Axel Calzas", "Kare Orilla", "Elsa Orilla", "Brand Tempestad", "Lars Azada", "Felix Balas", "Lidelse Dedos", "Birgitta Frente", "Adra Nubarron", "Gustav Cazar", "Vira Frente", "Willem Vasco-Pais", "Sten Sanjorge Jr.", "Ingrid Barranco", "Ada Campo-Corrente", "Orhan Strum", "Bertrand Ovan", "Emile Arpa", "Varro Awelon", "Dante Coginian", "Albina Hafon", "Benito Hawelon", "Claudio Hawelon", "Henk Mies", "Valeria Morlun", "Adan Morlun", "Cecilia Morluniau", "Irene Nant", "Dylan Scozzese", "Linnea Bergen", "Lucas Alcazar", "Isak Baza", "Nils Calixto", "Sven Flecha", "Kanon Herrero", "Varja Lagos", "Stenig Fusil", "Minke Mies", "Hennie Osvaldo", "Isia Vann", "Edvard Vann", "Felix Resumir", "Loreto Bodrogi", "Hideki Cocinaro", "Inga Ferro" ];
@@ -127,7 +128,7 @@ tos = ["Mat Bramar","Anda Ribera","Rachel Pantanal","Linda Lagos","Ruscella Mies
     var savedLineDate = lineDate, savedLineTime = lineTime;
 
     drawEmployeesParallel(svg);
-    d3.csv("email headers.csv", function (classes) {
+    d3.csv("parallel/emailheaders.csv", function (classes) {
         mainClasses = classes;
 
         var tempTopics = [];
